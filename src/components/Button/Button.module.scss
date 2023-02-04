@@ -1,0 +1,28 @@
+.btn {
+  padding: 16px;
+  border-radius: var(--spacing-8);
+  cursor: pointer;
+
+}
+
+.primary {
+  composes: btn;
+  background-color: var(--mainColor);
+  border: 1px solid var(--mainColor);
+  color: white;
+  &:hover {
+    background-color: var(--mainColorDarker);
+    border-color: var(--mainColorDarker)
+  }
+}
+
+.secondary {
+  composes: btn;
+  background-color: var(--white);
+  border: 1px solid var(--grey);
+  color: black;
+  &:hover {
+    background-color: var(--grey);
+    border-color: var(--grey);
+  }
+}

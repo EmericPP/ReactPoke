@@ -1,0 +1,14 @@
+.hs {
+  display: flex;
+}
+
+.hsLabel {
+  color: var(--mainColorDarker);
+  font-weight: bold;
+}
+
+.hsButton {
+  &:first-of-type {
+    margin-left: auto;
+  }
+}

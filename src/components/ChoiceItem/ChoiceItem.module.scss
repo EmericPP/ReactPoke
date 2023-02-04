@@ -1,0 +1,12 @@
+.choiceItem {
+  background-color: var(--white);
+  padding: var(--spacing-16);
+  border: none;
+  border-radius: var(--spacing-8);
+}
+
+.selectedChoiceItem {
+  composes: choiceItem;
+  background-color: var(--lightGray);
+  font-weight: bold;
+}

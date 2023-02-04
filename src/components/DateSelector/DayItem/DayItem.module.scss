@@ -1,0 +1,18 @@
+.item {
+  font-size: var(--font-size-16);
+  padding: var(--spacing-16);
+}
+
+.selected {
+  composes: item;
+  background-color: var(--lightGray);
+  border-radius: var(--spacing-8);
+  color: var(--black);
+  font-weight: bold;
+}
+
+.disabled {
+  composes: item;
+  background-color: var(--lightGray);
+  font-weight: bold;
+}
