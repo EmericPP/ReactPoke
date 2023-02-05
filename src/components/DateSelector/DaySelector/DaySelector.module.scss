@@ -1,4 +1,7 @@
 .selector {
   display: grid;
-  grid-template-columns: repeat(7, min-content) ;
+  grid-gap: var(--spacing-8);
+  grid-template-columns: repeat(7, max-content) ;
 }
+
+.day {width: 100%;}

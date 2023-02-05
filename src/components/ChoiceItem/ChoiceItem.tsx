@@ -3,13 +3,13 @@ import styles from './ChoiceItem.module.scss'
 
 type Props = {
   selected?: boolean
-  handleSelect: () => void
+  handleSelect: (item: string) => void
   label: string
 }
 export function ChoiceItem({ selected, handleSelect, label }: Props) {
   return (
     <button
-      onClick={handleSelect}
+      onClick={() => handleSelect(label)}
       className={selected ? styles.selectedChoiceItem : styles.choiceItem}
     >
       {label}

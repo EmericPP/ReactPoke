@@ -8,6 +8,8 @@
 }
 
 .hsButton {
+  color: var(--grey);
+  font-size: var(--spacing-16);
   &:first-of-type {
     margin-left: auto;
   }

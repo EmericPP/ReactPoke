@@ -1,4 +1,4 @@
-import { AppWrapper } from 'components/AppWrapper'
+import { AppWrapper } from 'components/AppWrapper/AppWrapper'
 import { AuthProvider, useAuthContext } from 'contexts/authContextManager'
 import LoginPage from 'pages/LoginPage'
 import ProfilePage from 'pages/ProfilePage'

@@ -4,7 +4,6 @@ import { Navigate, Outlet, useLocation } from 'react-router-dom'
 export function ProtectedRoute() {
   const auth = useAuthContext()
   const location = useLocation()
-  console.log('hop !')
   if (!auth.user) {
     return (
       <>

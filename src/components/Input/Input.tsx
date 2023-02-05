@@ -5,10 +5,18 @@ export type InputProps = {
   value: string
   name: string
   type?: 'text' | 'password' | 'phone'
-  handleChange: (event: ChangeEvent<HTMLInputElement>) => void
+  handleChange?: (event: ChangeEvent<HTMLInputElement>) => void
+  disabled?: boolean
 }
-export function Input({ value, handleChange, name, type = 'text' }: InputProps) {
+export function Input({ value, handleChange, name, type = 'text', disabled }: InputProps) {
   return (
-    <input className={styles.input} name={name} type={type} value={value} onChange={handleChange} />
+    <input
+      className={styles.input}
+      name={name}
+      type={type}
+      value={value}
+      onChange={handleChange}
+      disabled={disabled}
+    />
   )
 }

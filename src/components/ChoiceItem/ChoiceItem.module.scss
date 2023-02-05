@@ -1,4 +1,5 @@
 .choiceItem {
+  width: 100%;
   background-color: var(--white);
   padding: var(--spacing-16);
   border: none;
@@ -7,6 +8,6 @@
 
 .selectedChoiceItem {
   composes: choiceItem;
-  background-color: var(--lightGray);
+  background-color: var(--lightGrey);
   font-weight: bold;
 }

@@ -1,8 +1,11 @@
 .btn {
-  padding: 16px;
+  padding: var(--spacing-14) var(--spacing-20);
   border-radius: var(--spacing-8);
   cursor: pointer;
-
+  font-size: var(--font-size-14);
+  &:focus {
+    outline-color: var(--mainColorDarker);
+  }
 }
 
 .primary {
@@ -19,10 +22,9 @@
 .secondary {
   composes: btn;
   background-color: var(--white);
-  border: 1px solid var(--grey);
-  color: black;
+  border: 1px solid var(--mediumGrey);
+  box-shadow: 0 3px 6px -5px var(--mediumGrey);
   &:hover {
-    background-color: var(--grey);
     border-color: var(--grey);
   }
 }

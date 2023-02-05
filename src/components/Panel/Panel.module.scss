@@ -1,0 +1,13 @@
+.panel {
+  background-color: var(--white);
+  border-radius: var(--spacing-16);
+  padding: var(--spacing-30);
+  box-shadow: 0 6px 12px 0 var(--mediumGrey);
+
+}
+
+.title {
+  margin-bottom: var(--spacing-30);
+  font-size: var(--font-size-20);
+  font-weight: normal;
+}
