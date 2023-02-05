@@ -25,7 +25,7 @@ password: 0lelplR
 - create-react-app
 - axios
 - Typescript
-- api : [http://localhost:6006](https://dummyjson.com/)
+- api : [https://dummyjson.com/](https://dummyjson.com/)
 
 ### Css
 - scss + css modules
