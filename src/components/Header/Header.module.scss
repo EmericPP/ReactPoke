@@ -14,12 +14,16 @@
   display: block;
   color: white;
   text-decoration: none;
-  margin-right: var(--spacing-16);
   padding: var(--spacing-24);
 
   &:hover {
     background-color: var(--mainColor);
   }
+}
+
+.selectedNavLink {
+  composes: navLink;
+  background-color: var(--mainColor);
 }
 
 .auth {

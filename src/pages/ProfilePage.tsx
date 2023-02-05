@@ -1,8 +1,10 @@
 import React from 'react'
+import styles from './Page.module.scss'
 import { useAuthContext } from '../contexts/authContextManager'
 import useFormInputsController from '../hooks/useFormInputsController'
 import { Button } from '../components/Button/Button'
-import { Input } from '../components/Input/Input'
+import { Panel } from '../components/Panel/Panel'
+import { InputWithLabel } from '../components/Input/InputWithLabel'
 
 export default function ProfilePage() {
   const { user, updateMe } = useAuthContext()
@@ -26,37 +28,44 @@ export default function ProfilePage() {
     }
   }
   return (
-    <>
-      <h3>Profile</h3>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Username:
-          <Input
+    <section className={styles.page}>
+      <Panel title='Profile'>
+        <form className={styles.form} onSubmit={handleSubmit}>
+          <InputWithLabel
+            label='Username'
             name='username'
             type='text'
             value={formData.username}
             handleChange={handleChange}
+            modifier='formList'
           />
-        </label>
-        <label>
-          Password:
-          <Input
+          <InputWithLabel
+            label='Password'
             name='password'
             type='password'
             value={formData.password}
             handleChange={handleChange}
+            modifier='formList'
           />
-        </label>
-        <label>
-          Phone:
-          <Input name='phone' type='phone' value={formData.phone} handleChange={handleChange} />
-        </label>
-        <label>
-          City:
-          <Input name='city' type='text' value={formData.city} handleChange={handleChange} />
-        </label>
-        <Button type='submit' label='Modifier' />
-      </form>
-    </>
+          <InputWithLabel
+            label='Phone'
+            name='phone'
+            type='phone'
+            value={formData.phone}
+            handleChange={handleChange}
+            modifier='formList'
+          />
+          <InputWithLabel
+            label='city'
+            name='city'
+            type='text'
+            value={formData.city}
+            handleChange={handleChange}
+            modifier='formList'
+          />
+          <Button type='submit' label='Modifier' />
+        </form>
+      </Panel>
+    </section>
   )
 }

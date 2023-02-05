@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import styles from './Header.module.scss'
 import React from 'react'
 import { useAuthContext } from '../../contexts/authContextManager'
@@ -12,14 +12,20 @@ export function Header() {
       <nav>
         <ul className={styles.nav}>
           <li>
-            <Link className={styles.navLink} to='/'>
-              Profile Page
-            </Link>
+            <NavLink
+              className={({ isActive }) => (isActive ? styles.selectedNavLink : styles.navLink)}
+              to='/'
+            >
+              Profile
+            </NavLink>
           </li>
           <li>
-            <Link className={styles.navLink} to='/schedule'>
-              Schedule Page
-            </Link>
+            <NavLink
+              className={({ isActive }) => (isActive ? styles.selectedNavLink : styles.navLink)}
+              to='/schedule'
+            >
+              Schedule
+            </NavLink>
           </li>
         </ul>
       </nav>

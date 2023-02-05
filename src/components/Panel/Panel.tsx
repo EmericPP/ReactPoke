@@ -4,7 +4,7 @@ import classNames from 'classnames'
 
 type Props = {
   title: string
-  className: string
+  className?: string
 }
 export function Panel({ title, children, className }: PropsWithChildren<Props>) {
   return (

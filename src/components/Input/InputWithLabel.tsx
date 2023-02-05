@@ -11,6 +11,7 @@ type Props = {
   value: string
   className?: string
   disabled?: boolean
+  modifier?: 'formList'
 } & InputProps
 export function InputWithLabel({
   value,
@@ -20,9 +21,13 @@ export function InputWithLabel({
   label,
   className,
   disabled,
+  modifier,
 }: Props) {
   return (
-    <label className={cx(styles.label, className)} htmlFor={name}>
+    <label
+      className={cx(styles.label, className, { [styles.formList]: modifier === 'formList' })}
+      htmlFor={name}
+    >
       <span className={styles.labelText}>{label}</span>
       <Input
         name={name}

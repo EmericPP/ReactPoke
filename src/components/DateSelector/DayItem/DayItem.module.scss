@@ -18,6 +18,7 @@
   composes: item;
   color: var(--textGrey);
   &:hover {
+    cursor: initial;
     background-color: inherit;
   }
 }

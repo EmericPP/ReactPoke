@@ -1,9 +1,11 @@
 import { useLocation, useNavigate } from 'react-router-dom'
+import styles from './Page.module.scss'
 import React, { useState } from 'react'
 import { useAuthContext } from '../contexts/authContextManager'
 import useFormInputsController from '../hooks/useFormInputsController'
 import { Button } from '../components/Button/Button'
 import { InputWithLabel } from '../components/Input/InputWithLabel'
+import { Panel } from '../components/Panel/Panel'
 
 export default function LoginPage() {
   const navigate = useNavigate()
@@ -30,24 +32,25 @@ export default function LoginPage() {
   }
 
   return (
-    <div>
-      <p>You must log in to view the page</p>
-      {error && <p>{error}</p>}
-      <form onSubmit={handleSubmit}>
-        <InputWithLabel
-          label='Username:'
-          value={formData.username}
-          name='username'
-          handleChange={handleChange}
-        />
-        <InputWithLabel
-          label='Password:'
-          value={formData.password}
-          name='password'
-          handleChange={handleChange}
-        />
-        <Button type='submit' label='Login' />
-      </form>
+    <div className={styles.page}>
+      <Panel title='Login'>
+        {error && <p>{error}</p>}
+        <form className={styles.form} onSubmit={handleSubmit}>
+          <InputWithLabel
+            label='Username:'
+            value={formData.username}
+            name='username'
+            handleChange={handleChange}
+          />
+          <InputWithLabel
+            label='Password:'
+            value={formData.password}
+            name='password'
+            handleChange={handleChange}
+          />
+          <Button type='submit' label='Login' />
+        </form>
+      </Panel>
     </div>
   )
 }
