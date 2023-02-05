@@ -7,7 +7,7 @@ export const SchedulePage = () => {
   return (
     <section className={styles.schedule}>
       <Panel className={styles.panel} title='Schedule response'>
-        <ScheduleModule handleSubmit={() => console.log('schedule module submit !')} />
+        <ScheduleModule handleSubmit={(date) => console.log('schedule module submit: ', date)} />
       </Panel>
     </section>
   )
