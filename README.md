@@ -23,6 +23,7 @@ password: 0lelplR
 ## Tooling
 
 - create-react-app
+- React router
 - axios
 - Typescript
 - api : [https://dummyjson.com/](https://dummyjson.com/)
